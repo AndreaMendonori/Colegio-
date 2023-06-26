@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horario</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .schedule {
+      table-layout: fixed;
+    }
+
+    .schedule th,
+    .schedule td {
+      text-align: center;
+      vertical-align: middle;
+      height: 100px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .back-button {
+      margin-top: 5px; /* Ajusta este valor según sea necesario */
+      padding: 8px 16px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Horario</h1>
+    <table class="table table-bordered schedule">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Hora</th>
+          <th scope="col">Lunes</th>
+          <th scope="col">Martes</th>
+          <th scope="col">Miércoles</th>
+          <th scope="col">Jueves</th>
+          <th scope="col">Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">8:00 - 9:00</th>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 - 10:00</th>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+        </tr>
+        <tr>
+          <th scope="row">10:00 - 11:00</th>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+        </tr>
+        <tr>
+          <th scope="row">11:00 - 12:00</th>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+        </tr>
+        <tr>
+          <th scope="row">12:00 - 13:00</th>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+          <td>Clase </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="back-button" onclick="location.href='home.html'">Regresar a la página principal</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.fade').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>

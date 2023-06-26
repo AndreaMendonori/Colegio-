@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METATAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS ANIMATE -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">-->
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/loginform.css">
+    
+    <title>Login</title>
+
+    <script>
+
+        function auth(){
+            setTimeout(() => {
+                window.location.replace("home.html");
+            });
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <section class="login animated zoomIn">
+        <img class="login__avatar"
+        onmouseover = "this.className = 'login__avatar animated flip'"
+        onmouseout = "this.className = 'login__avatar'"
+        src="images/logo.png" alt="logo">
+        <h1 class="login__title">Login</h1>
+        <form onsubmit="return auth();" >
+            <!-- USERNAME -->
+            <label class="login__label">
+                Username
+                <input
+                class="login__input login__input__username" 
+                type="text" placeholder="Usuario"
+                />
+            </label>
+            
+            <!-- PASSWORD -->
+            <label class="login__label">
+                Password
+                <input
+                class="login__input login__input__password"
+                type="password" placeholder="Password"
+                />
+            </label>
+            
+            <!-- BUTTON -->
+            <input
+            class="login__input login__input__button"
+            type="submit" value="Login" />
+
+            <!-- LINKS -->
+            <a class="login__link" href="#">Olvidaste tu contraseña?</a>
+            <a class="login__link" href="#">No tienes una cuenta?</a>
+        </form>
+    </section>
+</body>
+</html>
